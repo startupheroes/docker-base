@@ -1,9 +1,8 @@
-FROM openjdk:9-jdk-slim
+FROM frolvlad/alpine-oraclejdk8:slim
 
 RUN echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
-RUN apt-get update && \
- apt-get install -y curl tzdata imagemagick ttf-dejavu && \
+RUN apk add --no-cache tzdata imagemagick ttf-dejavu && \
  cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && \
  echo "Europe/Moscow" > /etc/timezone && \
- apt-get clean
+ apk del tzdata
