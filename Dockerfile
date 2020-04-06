@@ -1,4 +1,4 @@
-FROM openjdk:13-alpine3.10
+FROM openjdk:14-alpine3.10
 
 RUN echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf 
 
