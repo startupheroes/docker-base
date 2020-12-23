@@ -10,6 +10,7 @@ RUN apk update && \
                        tzdata \
                        imagemagick \
                        ttf-dejavu \
+                       gettext \
                        curl && \
     pip install --upgrade awscli==1.18.51  && \
     cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && \
