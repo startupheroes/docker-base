@@ -1,10 +1,10 @@
-FROM openjdk:14-alpine3.10
+FROM openjdk:15-jdk-alpine
 
 RUN echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf 
 
 RUN apk update && \
-    apk add --no-cache python \
-                       py-pip \
+    apk add --no-cache python3 \
+                       py3-pip \
                        groff \
                        gcompat \
                        tzdata \
