@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk15:alpine-slim
+FROM adoptopenjdk/openjdk16:alpine-slim
 
 RUN echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf 
 
