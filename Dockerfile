@@ -12,8 +12,8 @@ RUN apk update && \
                        gettext \
                        curl && \
     pip install --upgrade awscli==1.18.51  && \
-    cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && \
-    echo "Etc/GMT+3" > /etc/timezone && \
+    cp /usr/share/zoneinfo/Etc/GMT-3 /etc/localtime && \
+    echo "Etc/GMT-3" > /etc/timezone && \
     apk --purge del tzdata py-pip
 
 
