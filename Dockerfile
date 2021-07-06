@@ -6,7 +6,6 @@ RUN apk update && \
     apk add --no-cache python3 \
                        py3-pip \
                        groff \
-                       gcompat \
                        tzdata \
                        imagemagick \
                        ttf-dejavu \
