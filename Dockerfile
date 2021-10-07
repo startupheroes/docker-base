@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk16:alpine-slim
+FROM eclipse-temurin:17-alpine
 
 RUN echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf 
 
